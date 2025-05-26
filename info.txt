@@ -1,0 +1,22 @@
+https://retoolapi.dev/CgGj6W/data
+See all available endpoints here (generated with json-server).
+Endpoint URL
+
+HTTP method endpoints
+
+GET
+/CgGj6W/data
+GET filter
+/CgGj6W/data?nombre=value
+GET by id
+/CgGj6W/data/1
+GET paginate
+/CgGj6W/data?_page=2&_limit=10
+POST
+/CgGj6W/data
+PUT
+/CgGj6W/data/1
+PATCH
+/CgGj6W/data/1
+DELETE
+/CgGj6W/data/1
