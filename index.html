@@ -24,24 +24,26 @@
 
     <main class="container">
         <h2>Integrantes del equipo</h2>
-        <table id="tabla" class="overflow-auto">
-            <thead>
-                <tr>
-                    <th>Id</th>
-                    <th>nombre</th>
-                    <th>apellido</th>
-                    <th>email</th>
-                    <th>edad</th>
-                    <th>acción</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!--Aqui va el cuerpo de la tabla, registros que vienen de la API-->
-
-            </tbody>
-        
-        </table>
-
+        <!--Ponemos un scroll a la tabla-->
+        <div class="tabla-scroll">  
+            <table id="tabla" class="overflow-auto">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>nombre</th>
+                        <th>apellido</th>
+                        <th>email</th>
+                        <th>edad</th>
+                        <th>acción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!--Aqui va el cuerpo de la tabla, registros que vienen de la API-->
+    
+                </tbody>
+            
+            </table>
+        </div>
     </main>
     <!--Modal para agregar integrantes-->
     <dialog id="modal-agregar" >

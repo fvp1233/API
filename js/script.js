@@ -30,10 +30,9 @@ function mostrarDatos(datos){
             <td>${persona.edad}</td>
                 <td>
                     <button>Editar</button>
-                    <button>Eliminar</button>
+                    <button onClick="EliminarRegistro(${persona.id})">Eliminar</button>
                 </td>        
         </tr>
-        
         `
     }); 
 }
@@ -71,7 +70,7 @@ document.getElementById("frmAgregar").addEventListener("submit", async e => {
     }
 
     //Llamar a la API para enviar el usuario
-    const respuesta = await fecth(API_URL, {
+    const respuesta = await fetch(API_URL, {
         method: "POST", 
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({nombre, apellido, email, edad})
@@ -94,3 +93,18 @@ document.getElementById("frmAgregar").addEventListener("submit", async e => {
 
 });
 
+//Función para borrar registros
+//Para eliminar necesitamos el parametro del id
+async function EliminarRegistro(id){
+    const confirmacion = confirm("¿Estás seguro que desear eliminar este registro?");
+
+    //Validamos si el usuario dijo que si desea eliminar
+    if(confirmacion){
+        //${} me inidica que es una variable
+        await fetch(`${API_URL}/${id}`, {method: "DELETE"});
+
+        //Recargamos la tabla para ver la eliminacion
+        obtenerPersonas();
+    }
+
+}
